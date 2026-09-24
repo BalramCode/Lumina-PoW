@@ -4,62 +4,88 @@ import doctor from "../assets/doctor.jpeg";
 import daptasanjeeb from "../assets/daptaSanjeeb.jpg";
 import daptabalram from "../assets/daptaBalram.jpg";
 import autism1 from "../assets/autism1.jpg";
+import parent from "../assets/parents.jpg";
+import ritumam from "../assets/ritumam.jpg";
+import psy from "../assets/psychiatrist.jpg";
 
 export const stakeholders = [
   {
     id: 'overview',
-    title: 'Lumina Overview',
-    location: 'Core Initiative',
-    heading: 'Dismantling Financial & Social Barriers',
-    description:
-      'Project Lumina is a groundbreaking socio-economic initiative that successfully dismantles both the financial and social barriers surrounding autism in underserved communities.',
-    observations: [
-      'Combines a 100% free digital platform with inclusive offline clubs',
-      'Rescues families from catastrophic medical debt',
-      'Actively engineers true, grassroots social acceptance',
+    title: 'Psychology Professionals',
+    profiles: [
+      {
+        location: 'Professional Perspective',
+        heading: 'Guru Prasad Bag - Clinical Psychologist',
+        description:
+          'The proposed Lumina platform addresses two important and often overlooked dimensions of autism support. First, it recognises the emotional burden and burnout that caregivers may experience. In many situations, attention remains primarily focused on the child, while the psychological well-being of parents and caregivers receives comparatively less attention. By proposing easier access to professionals, peer support, and reliable information, Lumina has the potential to strengthen support systems for caregivers as well.\n\nSecond, the initiative proposes reducing financial and geographic barriers to accessing autism-related support. If implemented effectively, providing free access to reliable resources and connecting families with appropriate professionals could be particularly meaningful for underserved communities. From a societal perspective, Lumina represents a promising concept that seeks to move autism support beyond the individual child and toward a more inclusive ecosystem involving families, professionals, and communities.',
+        images: [psy],
+      },
+      {
+        location: 'Professional Perspective',
+        heading: 'Rituparna Mitra, Research Scholar in Psychology',
+        description:
+          'Lumina presents a promising concept for making autism-related information, guidance, and support services more accessible to caregivers. One of the major challenges faced by families can be identifying the appropriate professional, service, or source of information at the right time. By proposing an integrated platform that brings these resources together, Lumina could potentially reduce some of the difficulties associated with navigating fragmented support systems.\n\nIf developed and implemented responsibly, the platform may also contribute to greater awareness, caregiver empowerment, and social inclusion of children with Autism Spectrum Disorder. Its potential societal impact lies not only in connecting families with services, but also in encouraging communities to understand autism and move toward greater acceptance and inclusion.',
+        images: [ritumam],
+      },
     ],
-    images: [autism1],
   },
+
+  {
+    id: 'parent',
+    title: 'Parents',
+    location: 'Parent Perspective',
+    heading: 'Mr. Rajat Mishra',
+    description:
+      'For many families, navigating autism support can involve searching for reliable information, identifying appropriate professionals, and finding communities that understand their experiences. Lumina proposes bringing these forms of support together in one accessible platform.\n\nFrom a parent’s perspective, such an ecosystem could potentially reduce feelings of isolation and make it easier to discover resources, connect with other caregivers, and participate in inclusive community activities. If successfully implemented, Lumina could contribute to a future where families feel better informed, more connected, and less alone while navigating their child’s developmental journey.',
+    observations: [
+      'Potential Need: Accessible therapy information and caregiver support',
+      'Potential Impact: Greater connection between families and local communities',
+    ],
+    images: [parent],
+  },
+
   {
     id: 'collector',
     title: 'District Collector - Kalahandi',
-    location: 'Government Authority',
-    heading: "Here's what he feels about Lumina:",
+    location: 'Government Perspective',
+    heading: 'Potential Perspective on Lumina:',
     description:
-      '“Lumina redefines autism support by shifting care from expensive clinics directly into the hands of empowered families. Its 100% free model protects marginalized households from catastrophic healthcare debt while giving non-verbal children an immediate digital voice.”\n\n— Shri Sachin Pawar, IAS (Collector & District Magistrate, Kalahandi)',
+      'Lumina proposes a community-oriented approach to autism support by attempting to connect families with information, professionals, and inclusive community resources through a single platform. From a public-service perspective, such a model could potentially help address geographic, financial, and informational barriers faced by families in underserved areas.\n\nIf implemented at scale and supported through appropriate institutional partnerships, the concept could contribute to stronger community-level autism awareness and inclusion while complementing existing government and healthcare services.',
     observations: [
-      'Shifts care directly into the hands of empowered families',
-      'Protects marginalized households from healthcare debt',
-      'Gives non-verbal children an immediate digital voice',
+      'Potentially improves access to autism-related information and services',
+      'Could help address geographic and financial barriers',
+      'Could strengthen community-level awareness and inclusion',
     ],
     images: [collector],
   },
+
   {
     id: 'cdo',
     title: 'Chief Development Officer, Zilla Parishad - Kalahandi',
-    location: 'Zilla Parishad',
-    heading: "Here's what he feels about Lumina:",
+    location: 'Development Perspective',
+    heading: 'Potential Perspective on Lumina:',
     description:
-      '“Project Lumina is a transformative initiative that bridges crucial gaps in social infrastructure. By making care accessible directly at the family level, it provides sustainable relief from healthcare burdens and empowers non-verbal children with accessible digital communication tools.”\n\n— Sri Soumya Ranjan Pradhan, IAS (CDO-cum-EO, Zilla Parishad, Kalahandi)',
+      'Project Lumina proposes a digital and community-based approach to addressing gaps in autism support infrastructure. By connecting families with professionals, educational resources, and community networks, the platform could potentially complement existing social and healthcare systems.\n\nIts broader societal potential lies in making autism support more accessible at the family and community level. With appropriate partnerships, responsible implementation, and long-term sustainability, Lumina could contribute to a more inclusive support ecosystem for underserved communities.',
     observations: [
-      'Bridges crucial gaps in social infrastructure',
-      'Makes care accessible directly at the family level',
-      'Provides sustainable relief from healthcare burdens',
+      'Could help bridge gaps in local support infrastructure',
+      'Could improve access to resources at the family level',
+      'Could support long-term community inclusion',
     ],
     images: [cdo],
   },
+
   {
     id: 'ngo',
     title: 'NGO Partner',
-    location: 'DAPTA',
-    heading: "Here's what DAPTA has to say about Lumina:",
+    location: 'DAPTA Perspective',
+    heading: 'Potential Perspective from an NGO Partner:',
     description:
-      '“Through its innovative blend of digital tools and inclusive offline clubs, Lumina addresses social discrimination at its cultural root. By bringing neurotypical peers and autistic children together, it offers a sustainable, CSR-funded blueprint for true community acceptance.”',
+      'Lumina proposes combining digital access to autism resources with community-based inclusion initiatives. This approach could potentially address not only the lack of accessible support but also the social isolation and discrimination that some autistic children and their families may experience.\n\nThe proposed Lumina Clubs and community activities could create opportunities for autistic and neurotypical children, parents, volunteers, and community members to interact in inclusive environments. If implemented sustainably through partnerships with NGOs, CSR organisations, and local institutions, the concept could contribute to a broader shift from awareness toward meaningful social acceptance.',
     observations: [
-      'Addresses social discrimination at its cultural root',
-      'Brings neurotypical peers and autistic children together',
-      'Offers a sustainable, CSR-funded blueprint for community acceptance',
+      'Could address social isolation and barriers to inclusion',
+      'Could encourage interaction between autistic and neurotypical communities',
+      'Could create opportunities for NGO and CSR-supported community programs',
     ],
     images: [daptasanjeeb, daptabalram],
-  }
+  },
 ];
