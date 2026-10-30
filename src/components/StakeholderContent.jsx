@@ -1,9 +1,14 @@
 import ImageGallery from './ImageGallery';
 import Observations from './Observations';
+import ProfileSequenceSection from './ProfileSequenceSection';
 
 export default function StakeholderContent({ stakeholder, isActive }) {
+  if (stakeholder.officials || stakeholder.profiles) {
+    return <ProfileSequenceSection stakeholder={stakeholder} isActive={isActive} />;
+  }
+
   const profiles = stakeholder.profiles || [stakeholder];
-  const isCompact = stakeholder.id === 'overview' || stakeholder.id === 'parent';
+  const isCompact = stakeholder.id === 'parent';
 
   return (
     <article className={`stakeholder-view ${isActive ? 'active' : ''}`} aria-hidden={!isActive}>

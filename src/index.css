@@ -437,3 +437,592 @@ body {
     margin-bottom: 0.25rem;
   }
 }
+
+/* ==========================================================================
+   VERTICAL PROFILE SEQUENCE & ENLARGED PHOTO CARDS (BUREAUCRATS & PSYCHOLOGISTS)
+   ========================================================================== */
+.sequence-view,
+.bureaucrats-view {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(99, 139, 138, 0.4) transparent;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 85px;
+  padding-bottom: var(--spacing-2xl);
+}
+
+.sequence-view::-webkit-scrollbar,
+.bureaucrats-view::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+}
+
+.sequence-view::-webkit-scrollbar-track,
+.bureaucrats-view::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sequence-view::-webkit-scrollbar-thumb,
+.bureaucrats-view::-webkit-scrollbar-thumb {
+  background: rgba(99, 139, 138, 0.35);
+  border-radius: 3px;
+}
+
+.sequence-view::-webkit-scrollbar-thumb:hover,
+.bureaucrats-view::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 139, 138, 0.6);
+}
+
+.sequence-container,
+.bureaucrats-container {
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sticky Top Bar with Title & Jump Navigation */
+.sequence-top-bar,
+.bureaucrats-top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: var(--color-bg);
+  padding: 0.25rem 0 0.85rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.sequence-top-info,
+.bureaucrats-top-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sequence-top-info .location-label,
+.bureaucrats-top-info .location-label {
+  margin-bottom: 0.2rem;
+  font-size: 0.72rem;
+}
+
+.sequence-title-wrap,
+.bureaucrats-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.sequence-main-title,
+.bureaucrats-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.sequence-title-sep,
+.bureaucrats-title-sep {
+  color: var(--color-accent-teal);
+  font-weight: 300;
+  opacity: 0.6;
+}
+
+.sequence-subtitle,
+.bureaucrats-subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+/* Jump Navigation Pills */
+.sequence-jump-nav,
+.bureaucrat-jump-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sequence-jump-btn,
+.bureaucrat-jump-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 0.35rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.sequence-jump-btn:hover,
+.bureaucrat-jump-btn:hover {
+  background: #FFFFFF;
+  color: var(--color-text-primary);
+  border-color: rgba(99, 139, 138, 0.4);
+}
+
+.sequence-jump-btn.active,
+.bureaucrat-jump-btn.active {
+  background: var(--color-text-primary);
+  color: #FFFFFF;
+  border-color: var(--color-text-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.jump-index {
+  font-weight: 600;
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+
+.sequence-jump-btn.active .jump-index,
+.bureaucrat-jump-btn.active .jump-index {
+  color: var(--color-accent-peach);
+  opacity: 1;
+}
+
+/* Sections Sequence */
+.sequence-sections-wrapper,
+.bureaucrats-sections-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.sequence-profile-section,
+.bureaucrat-profile-section {
+  min-height: calc(100vh - 160px);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-margin-top: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 0 2rem 0;
+  box-sizing: border-box;
+}
+
+/* Single Profile Card - Enlarged & Balanced */
+.sequence-single-card,
+.bureaucrat-single-card {
+  width: 100%;
+  max-width: 1360px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sequence-single-card:hover,
+.bureaucrat-single-card:hover {
+  border-color: rgba(99, 139, 138, 0.35);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* Equal 1:1 Split for Greater Image Presence */
+.sequence-card-inner,
+.bureaucrat-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+/* Card Left: Text & Content */
+.sequence-card-text,
+.bureaucrat-card-text {
+  padding: clamp(1.75rem, 2.75vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sequence-official-meta,
+.bureaucrat-official-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.sequence-badge,
+.bureaucrat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(99, 139, 138, 0.1);
+  color: var(--color-accent-teal);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sequence-badge-dot,
+.bureaucrat-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent-teal);
+}
+
+.sequence-counter,
+.bureaucrat-counter {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.sequence-header-group,
+.bureaucrat-header-group {
+  margin-bottom: 0.85rem;
+}
+
+.sequence-dept-label,
+.bureaucrat-dept-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent-teal);
+  margin-bottom: 0.3rem;
+}
+
+.sequence-role-heading,
+.bureaucrat-role-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2.4vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.18;
+  color: var(--color-text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.sequence-designation-sub,
+.bureaucrat-designation-sub {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.sequence-card-divider,
+.bureaucrat-card-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, rgba(99, 139, 138, 0.35), rgba(0, 0, 0, 0.06), transparent);
+  margin-bottom: 1.15rem;
+}
+
+.sequence-perspective-box,
+.bureaucrat-perspective-box {
+  margin-bottom: 1.15rem;
+}
+
+.sequence-heading-label,
+.bureaucrat-heading-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.55rem;
+}
+
+.sequence-description-text,
+.bureaucrat-description-text {
+  color: var(--color-text-secondary);
+  font-size: clamp(0.92rem, 1.05vw, 1.02rem);
+  line-height: 1.62;
+}
+
+.sequence-quote-para {
+  font-style: italic;
+  font-size: clamp(0.96rem, 1.1vw, 1.08rem) !important;
+  line-height: 1.68 !important;
+  color: var(--color-text-primary) !important;
+  border-left: 3px solid var(--color-accent-teal);
+  padding-left: 1rem;
+  margin: 0.35rem 0;
+  background: rgba(99, 139, 138, 0.04);
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.sequence-description-text p + p,
+.bureaucrat-description-text p + p {
+  margin-top: 0.75rem;
+}
+
+.sequence-card-observations,
+.bureaucrat-card-observations {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.sequence-card-observations .observations-title,
+.bureaucrat-card-observations .observations-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.sequence-card-observations .observation-list,
+.bureaucrat-card-observations .observation-list {
+  gap: 0.65rem;
+}
+
+.sequence-card-observations .observation-item,
+.bureaucrat-card-observations .observation-item {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--color-text-secondary);
+}
+
+/* Card Right: Photo Panel with Enlarged Image Framing */
+.sequence-card-photo-panel,
+.bureaucrat-card-photo-panel {
+  background: #FAF9F5;
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+  padding: clamp(1.75rem, 2.5vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.sequence-photo-frame,
+.bureaucrat-photo-frame {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 480px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  background: transparent;
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.4s ease;
+}
+
+/* Original Aspect Ratio: natural proportions without aggressive cropping */
+.sequence-portrait-img,
+.bureaucrat-portrait-img {
+  max-width: 100%;
+  max-height: 480px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.sequence-single-card:hover .sequence-photo-frame,
+.bureaucrat-single-card:hover .bureaucrat-photo-frame {
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.sequence-single-card:hover .sequence-portrait-img,
+.bureaucrat-single-card:hover .bureaucrat-portrait-img {
+  transform: scale(1.02);
+}
+
+.sequence-photo-tag,
+.bureaucrat-photo-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(20, 20, 20, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  pointer-events: none;
+  max-width: calc(100% - 24px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sequence-photo-caption,
+.bureaucrat-photo-caption {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  line-height: 1.4;
+  font-style: italic;
+  max-width: 90%;
+}
+
+.sequence-next-btn,
+.bureaucrat-next-btn {
+  margin-top: 0.25rem;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 0.4rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.sequence-next-btn:hover,
+.bureaucrat-next-btn:hover {
+  background: #FFFFFF;
+  color: var(--color-text-primary);
+  border-color: var(--color-accent-teal);
+  transform: translateY(1px);
+}
+
+.sequence-next-arrow,
+.bureaucrat-next-arrow {
+  font-size: 0.9rem;
+  color: var(--color-accent-teal);
+  line-height: 1;
+}
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .sequence-card-inner,
+  .bureaucrat-card-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .sequence-card-photo-panel,
+  .bureaucrat-card-photo-panel {
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+  }
+
+  .sequence-photo-frame,
+  .bureaucrat-photo-frame,
+  .sequence-portrait-img,
+  .bureaucrat-portrait-img {
+    max-height: 380px;
+    height: auto;
+    width: auto;
+  }
+
+  .sequence-profile-section,
+  .bureaucrat-profile-section {
+    min-height: auto;
+    padding: 1rem 0 2rem 0;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .sequence-top-bar,
+  .bureaucrats-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .sequence-jump-nav,
+  .bureaucrat-jump-nav {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+
+  .sequence-card-text,
+  .bureaucrat-card-text {
+    padding: 1.25rem;
+  }
+
+  .sequence-role-heading,
+  .bureaucrat-role-heading {
+    font-size: 1.5rem;
+  }
+
+  .sequence-photo-frame,
+  .bureaucrat-photo-frame,
+  .sequence-portrait-img,
+  .bureaucrat-portrait-img {
+    max-height: 280px;
+    height: auto;
+    width: auto;
+  }
+
+  .sequence-profile-section,
+  .bureaucrat-profile-section {
+    min-height: auto;
+    scroll-snap-align: none;
+  }
+
+  .sequence-view,
+  .bureaucrats-view {
+    scroll-snap-type: none;
+  }
+}
+
+/* Screen height constraints */
+@media (max-height: 750px) {
+  .sequence-card-text,
+  .bureaucrat-card-text {
+    padding: 1.25rem 1.75rem;
+  }
+
+  .sequence-photo-frame,
+  .bureaucrat-photo-frame,
+  .sequence-portrait-img,
+  .bureaucrat-portrait-img {
+    max-height: 340px;
+    height: auto;
+    width: auto;
+  }
+
+  .sequence-role-heading,
+  .bureaucrat-role-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .sequence-description-text,
+  .bureaucrat-description-text {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .sequence-perspective-box,
+  .bureaucrat-perspective-box {
+    margin-bottom: 0.85rem;
+  }
+}
