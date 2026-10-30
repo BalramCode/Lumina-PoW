@@ -1,16 +1,28 @@
-import cdo from "../assets/cdo.jpeg";
-import collector from "../assets/collector.jpeg";
-import doctor from "../assets/doctor.jpeg";
-import daptasanjeeb from "../assets/daptaSanjeeb.jpg";
-import daptabalram from "../assets/daptaBalram.jpg";
-import autism1 from "../assets/autism1.jpg";
-import parent1 from "../assets/parent1.jpg";
-import parent2 from "../assets/parent2.png";
-import ritumam from "../assets/ritumam.jpg";
-import psy from "../assets/psychiatrist.jpg";
-import cdmo from "../assets/cdmo.png";
-import minatiDash from "../assets/minatiDash.png";
+// import cdo from "../assets/cdo.jpeg";
+// import collector from "../assets/collector.jpeg";
+// import doctor from "../assets/doctor.jpeg";
+// import daptasanjeeb from "../assets/daptaSanjeeb.jpg";
+// import daptabalram from "../assets/daptaBalram.jpg";
+// import autism1 from "../assets/autism1.jpg";
+// import parent1 from "../assets/parent1.jpg";
+// import parent2 from "../assets/parent2.png";
+// import ritumam from "../assets/ritumam.jpg";
+// import psy from "../assets/psychiatrist.jpg";
+// import cdmo from "../assets/cdmo.png";
+// import minatiDash from "../assets/minatiDash.png";
 
+const cdo = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352456/81c816ac-e357-4794-be40-0027c8dbee5d.png";
+const collector = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352462/0416c71c-70bc-4cc3-a793-cf6a32f6509f.png";
+const doctor = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352437/fddcd8c2-b1bf-4f41-91d1-c99f58c8f3c2.png";
+const daptasanjeeb = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352587/0eaabe5b-70eb-41f6-9f40-eecc33bf72d0.png";
+const daptabalram = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352579/3073ae8b-2e7d-4764-8187-bf7770b04c45.png";
+const autism1 = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352987/1d965189-c460-447b-8b51-4e15cba66956.png";
+const parent1 = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352640/53450b10-848f-4b51-9bf5-3b4af8953934.png";
+const parent2 = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352949/3e524a70-c67b-4d29-b359-a43cb14a13ac.png";
+const ritumam = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352658/ab415aee-c0c9-4a00-ba22-c472c595ce3e.png";
+const psy = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352654/0eff2d4c-e7e9-4557-896e-2f15462376f4.png";
+const cdmo = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352500/f8a349ad-ccd3-43f4-956c-0872f0e1b953.png";
+const minatiDash = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352470/4cabdbaa-b886-4463-bf41-9317d8156787.png";
 
 export const stakeholders = [
   {
