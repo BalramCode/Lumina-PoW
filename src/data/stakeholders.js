@@ -12,7 +12,7 @@
 // import minatiDash from "../assets/minatiDash.png";
 
 const cdo = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352456/81c816ac-e357-4794-be40-0027c8dbee5d.png";
-const collector = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352462/0416c71c-70bc-4cc3-a793-cf6a32f6509f.png";
+const collector = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1795591350/05d65ebc-04b2-476e-9942-e482f2037d05.png";
 const doctor = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352437/fddcd8c2-b1bf-4f41-91d1-c99f58c8f3c2.png";
 const daptasanjeeb = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352587/0eaabe5b-70eb-41f6-9f40-eecc33bf72d0.png";
 const daptabalram = "https://res.cloudinary.com/ddptxvwrj/image/upload/v1793352579/3073ae8b-2e7d-4764-8187-bf7770b04c45.png";
